@@ -1,7 +1,7 @@
 # Optical Character recognition
 This is a simple OCR Web App using tesseract, an open source OCR engine.
 <br>
-In this app it was used the pyton library: pytesseract
+In this app, it was used the "pytesseract" pyton library to handle the text recognition. 
 <br>
 <br>
 Contains:
@@ -12,7 +12,7 @@ Contains:
 - Tesseract
 - Python (with a child-process)
 
-# How it works?
+# How does it works?
 <br>
 The user simply uploads an image using the file uploader, and clicks upload,
 all the read text will show up in the output column.
