@@ -1,0 +1,28 @@
+
+<nav class="navbar custom-navbar navbar-expand-lg navbar-primary">
+    <div class="container">
+        <a href="" class="navbar-brand text-white mt-5">Shows & Events Chelas Application</a>
+    </div>
+    <div class="container justify-content-end mt-4 ">
+        <button id="exit-button" class="btn btn-primary text-white rounded-pill">Exit</button>
+    </div>
+</nav>
+<div class="container text-center mt-5">
+    <h1 class="popular-events-title" id="popular-events-header">Your groups:</h1>
+    </div>
+
+<section class="image-grid">
+    {{#each groups}}
+        <div class="grid-item">
+            <div class="container text-center group-name">
+                {{name}}
+            </div>
+            <div class="container text-center">
+                <button id="edit-group" data-id="{{id}}" class="btn btn-primary">Edit Group</button>
+                <button id="details-group" data-id="{{id}}" class="btn btn-primary">Group Details</button>
+                <button id="delete-group" data-id="{{id}}" class="btn btn-danger custom-button-margin">Delete Group</button>
+            </div>
+        </div>
+    {{/each}}
+</section>
+

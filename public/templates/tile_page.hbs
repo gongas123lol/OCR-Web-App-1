@@ -1,0 +1,78 @@
+<nav class="navbar main-navbar navbar-expand-lg navbar-primary">
+    <div class="container">
+        <a href="" class="navbar-brand text-white">Shows & Events Chelas Application</a>
+    </div>
+    <div class="container d-flex justify-content-center align-items-center search-container sticky-top">
+        <form class="d-flex col-12" id="search-form">
+            <div class="input-group border border-white rounded-pill sticky-top">
+                <input class="form-control me-2 border-0 rounded-pill" id="search-input" type="search"
+                       placeholder="Search for a specific event" aria-label="Search" required >
+                <button class="btn btn-search text-white mb-2 border-0 rounded-pill" type="submit" id="search-button"><i
+                        class="fas fa-search"></i></button>
+            </div>
+        </form>
+    </div>
+    {{#if isLogged}}
+    <div class="container justify-content-end ">
+        <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle" type="button" id="dropDownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="dropdown-menu bg-primary dropdown-menu-end" aria-labelledby="dropDownMenuButton">
+                <button id="create-group" class="btn btn-primary dropdown-button">Create a group</button>
+                <button id="my-groups" class="btn btn-primary dropdown-button">My groups</button>
+                <button id="logout-button" class="btn btn-primary dropdown-button">Logout</button>
+            </div>
+        </div>
+    </div>
+        {{else}}
+        <div class="container justify-content-end"></div>
+        {{/if}}
+</nav>
+
+<div class="modern-layout">
+    <div class="text-container">
+        <h1 style="text-align:center">{{name}}</h1>
+        <h4 style="text-align:center">Event date: {{date}}</h4>
+        <h4 style="text-align:center">Sales start at: {{sales}}</h4>
+        <h3 style="text-align:center">{{segment}}, {{genre}}, {{subgenre}}</h3>
+        {{#if isLogged}}
+        <div class="container text-center">
+
+            <div class="dropdown">
+                <button  class="btn btn-primary dropdown-toggle" type="button" id="dropDownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="min-width: 140px;">
+                    Add to group
+                </button>
+                <div class="dropdown-menu bg-primary shadow dropdown-menu-end" aria-labelledby="dropDownMenuButton">
+                    {{#each usergroups}}
+                        <button name="{{name}}" gid="{{id}}" class="btn btn-primary dropdown-button" data-id="{{../id}}" id="add-to-group">{{name}}</button>
+                    {{/each}}
+                </div>
+            </div>
+            {{#if inDetails}}
+            <button class="btn btn-danger mt-1" id="remove-from-group" data-id="{{id}}">Remove event</button>
+            {{/if}}
+
+        </div>
+        {{else}}
+            <div class="container text-center"></div>
+        {{/if}}
+        {{#if isLogged}}
+            <div class="container text-center">
+                <button class="btn btn-primary" id="exit-to-main-button">Back</button>
+            </div>
+        {{else}}
+            <div class="container text-center">
+                <button class="btn btn-primary" id="exit-to-index-button">Back</button>
+            </div>
+        {{/if}}
+        <div class="container text-center mt-1" id="message-container"></div>
+    </div>
+    <div class="image-container">
+        <div class="image-wrapper shadow">
+            <img src="{{source}}" alt="{{name}}" id="{{id}}">
+        </div>
+    </div>
+
+</div>
+

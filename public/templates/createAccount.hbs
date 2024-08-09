@@ -1,0 +1,34 @@
+
+<div class="container d-flex justify-content-center align-items-center search-container sticky-top">
+    <div class="card p-5 shadow ">
+        <div class="container text-center">
+        <h1 class="create-account-title">Create your account.</h1>
+            <button class="new-user-button text-primary" id="existing-user-button">Already have an account? Log in.</button>
+        </div>
+        <form id="user-creation" action="/users/create" method="post">
+            <div class="form-group mb-2">
+                <label for="username_input" class="form-label">Username:</label>
+                <input name="username_input" id="username_input" class="form-control" placeholder="Enter your username" required>
+            </div>
+            <div class="container justify-content-center text-center">
+                <h1 class="error-message" id="error-message"></h1>
+            </div>
+
+            <div class="form-group mb-2">
+                <label for="password_input" class="form-label">Password:</label>
+                <input name="password_input" id="password_input" class="form-control" type="password" placeholder="Enter your password" required>
+            </div>
+            <div class="container justify-content-center text-center">
+            <button type="submit" class="btn btn-light mt-2 shadow" id="user-creation">Create account</button>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+
+<section class="align-items-baseline">
+    <div class="container text-center mt-5">
+        <h5 class="footer-note">Explore the brand new SECA - Made by 2 ISEL students with love.</h5>
+    </div>
+</section>

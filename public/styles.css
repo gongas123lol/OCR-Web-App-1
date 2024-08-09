@@ -1,0 +1,40 @@
+
+
+body {
+    font-family: 'Outfit', sans-serif;';
+    font-weight: 600;
+    background: #F7F7F7;
+
+    text-align:center;
+    align:center;
+}
+
+.btn-primary {
+    background-color: #2453f4;
+    margin-top: 10px;
+    border-color: #2453f4;
+}
+
+.imageupload{
+    max-width: 50px;
+}
+
+.previewimg {
+    display: none;
+    max-width: 300px;
+    max-height: 300px;
+    width: auto; /* Maintain aspect ratio */
+    height: auto; /* Maintain aspect ratio */
+    margin-top: 10px; /* Space between label and image */
+}
+
+.preview-container {
+    display: flex;
+    flex-direction: column; /* Stack label and image vertically */
+    align-items: center; /* Center-align the items */
+    margin-top: 10px; /* Margin to separate from top row */
+}
+
+.output{
+    font-size: small;
+}

@@ -1,0 +1,40 @@
+<nav class="navbar main-navbar navbar-expand-lg navbar-primary">
+    <div class="container">
+        <a href="" class="navbar-brand text-white">Shows & Events Chelas Application</a>
+    </div>
+    <div class="container d-flex justify-content-center align-items-center search-container sticky-top">
+        <form class="d-flex col-12" id="search-form">
+            <div class="input-group border border-white rounded-pill sticky-top">
+                <input class="form-control me-2 border-0 rounded-pill" id="search-input" type="search"
+                       placeholder="Search for a specific event" aria-label="Search" required >
+                <button class="btn btn-search text-white mb-2 border-0 rounded-pill" type="submit" id="search-button"><i
+                        class="fas fa-search"></i></button>
+            </div>
+        </form>
+    </div>
+    <div class="container justify-content-end ">
+        <button id="login-button" class="btn btn-primary text-white rounded-pill m-1">Login</button>
+        <button id="create-account-button" class="btn btn-primary text-white rounded-pill text-nowrap m-1">Create
+            account
+        </button>
+    </div>
+</nav>
+<section>
+    <div class="container text-center mt-5">
+        <h1 class="popular-events-title" id="popular-events-header">Popular Events You May Like:</h1>
+    </div>
+</section>
+
+<div class="container text-center error-message mt-error-custom" id="error-message">
+
+</div>
+
+<section class="image-grid">
+    {{#each events}}
+        <div class="grid-item">
+            <img src="{{images}}" alt="{{name}}" class="tile" date="{{date}}" segment="{{segment}}" genre="{{genre}}" subgenre="{{subgenre}}" id="{{id}}" sales="{{sales}}">
+        </div>
+    {{/each}}
+</section>
+
+

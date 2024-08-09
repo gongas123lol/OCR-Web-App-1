@@ -1,0 +1,49 @@
+<nav class="navbar custom-navbar navbar-expand-lg navbar-primary">
+    <div class="container">
+        <a href="" class="navbar-brand text-white mt-5">Shows & Events Chelas Application</a>
+    </div>
+    <div class="container justify-content-end mt-4">
+        <button id="exit-to-groups" class="btn btn-primary text-white rounded-pill">Exit</button>
+    </div>
+</nav>
+
+
+
+
+    <ul class="list-group">
+
+        <div class="container text-center">
+            <h1 class="popular-events-title" id="popular-events-header">Details of {{group.name}}</h1>
+
+            <h2>Group name:</h2>
+            {{#if group.name}}
+                {{group.name}}
+            {{else}}
+                N/A
+            {{/if}}
+
+            <h2>Group description:</h2>
+            {{#if group.description}}
+                {{group.description}}
+            {{else}}
+                N/A
+            {{/if}}
+
+            <h2>Events:</h2>
+
+        </div>
+
+    </ul>
+
+<div class="container text-center mb-2">
+    <button id="exit-to-groups" class="btn btn-primary">Exit</button>
+</div>
+<section class="image-grid custom-margin">
+    {{#each group.events}}
+        <div class="grid-item" id="tile">
+            {{#if this.images.length}} <!-- Check if the images array is not empty -->
+                <img src="{{this.images.[0].url}}" alt="{{this.name}}" class="tile" id="{{this.id}}" date="{{#if this.date}}{{this.date}}{{else}}N/A{{/if}}" segment="{{#if this.segment}}{{this.segment}}{{else}}N/A{{/if}}" genre="{{#if this.genre}}{{this.genre}}{{else}}N/A{{/if}}" subgenre="{{this.subgenre}}" sales="{{#if this.sales}}{{this.sales}}{{else}}N/A{{/if}}">
+            {{/if}}
+        </div>
+    {{/each}}
+</section>

@@ -1,0 +1,27 @@
+<nav class="navbar custom-navbar navbar-expand-lg navbar-primary">
+    <div class="container">
+        <a href="" class="navbar-brand text-white mt-5">Shows & Events Chelas Application</a>
+    </div>
+    <div class="container justify-content-end mt-4">
+        <button id="exit-button" class="btn btn-primary text-white rounded-pill">Exit</button>
+    </div>
+</nav>
+
+<div class="container text-center mt-5">
+    <h1 class="popular-events-title" id="popular-events-header">Create a group</h1>
+</div>
+
+<div class="container text text-center">
+    <form id="create-group-form" action="/groups/create" method="post">
+        <div class="mb-3">
+            <label for="groupname_input" class="form-label">Group name:</label>
+            <input name="groupname_input" id="groupname_input" class="form-control" placeholder="Enter your group's name" required>
+        </div>
+        <div class="mb-3">
+            <label for="group_description" class="form-label">Description:</label>
+            <textarea name="group_description" id="group_description" class="form-control" rows="5" placeholder="Enter your group's description" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-success" id="create-group-button">Create group</button>
+    </form>
+    <button class="btn btn-danger mt-3" id="exit-button">Exit</button>
+</div>
